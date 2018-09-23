@@ -4,7 +4,7 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { Request, Response, NextFunction } from 'express';
 import * as jwt from 'jsonwebtoken';
 import { SECRET } from '../config';
-import { UserService } from './user.service';
+import { UserService } from '../user.service';
 
 @Middleware()
 export class AuthMiddleware implements NestMiddleware {

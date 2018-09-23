@@ -2,10 +2,10 @@ import { Get, Post, Body, Put, Delete, Param, Controller, UsePipes } from '@nest
 import { Request } from 'express';
 import { UserService } from './user.service';
 import { UserEntity } from './user.entity';
-import { UserRO } from './user.interface';
+import { UserRO } from './interface/user.interface';
 import { CreateUserDto, UpdateUserDto, LoginUserDto } from './dto';
 import { HttpException } from '@nestjs/core';
-import { User } from './user.decorator';
+import { User } from './decorator/user.decorator';
 import { ValidationPipe } from '../shared/pipes/validation.pipe';
 
 import {

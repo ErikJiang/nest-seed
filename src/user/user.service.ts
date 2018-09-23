@@ -5,7 +5,7 @@ import { UserEntity } from './user.entity';
 import {CreateUserDto, LoginUserDto, UpdateUserDto} from './dto';
 const jwt = require('jsonwebtoken');
 import { SECRET } from '../config';
-import { UserRO } from './user.interface';
+import { UserRO } from './interface/user.interface';
 import { validate } from 'class-validator';
 import { HttpException } from '@nestjs/core';
 import { HttpStatus } from '@nestjs/common';
