@@ -2,20 +2,26 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
+# [NEST](https://github.com/nestjs/nest) 种子工程框架
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) 种子工程框架
 
-## Installation
+## 安装依赖
 
-```bash
+``` bash
 $ npm install
 ```
 
-## Running the app
+## 创建数据库
 
-```bash
+``` sql
+CREATE DATABASE nestseed DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+```
+配置 `config/typeorm.ts` 数据库连接参数;
+
+## 启动项目
+
+``` bash
 # development
 $ npm run start
 
@@ -30,9 +36,9 @@ $ npm run start:hmr
 $ npm run start:prod
 ```
 
-## Test
+## 测试
 
-```bash
+``` bash
 # unit tests
 $ npm run test
 
@@ -43,9 +49,7 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-预计支持如下：
+## 预计需要支持
 
 * Swagger
 * TypeORM
