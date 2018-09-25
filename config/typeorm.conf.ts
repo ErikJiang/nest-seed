@@ -1,6 +1,6 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
-const dbOptions: TypeOrmModuleOptions = {
+export const DBOptions: TypeOrmModuleOptions = {
     "type": "mysql",
     "host": "localhost",
     "port": 3306,
@@ -12,5 +12,3 @@ const dbOptions: TypeOrmModuleOptions = {
     ],
     "synchronize": true
 };
-
-export default dbOptions;
