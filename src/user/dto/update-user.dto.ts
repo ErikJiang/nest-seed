@@ -1,6 +1,6 @@
 export class UpdateUserDto {
-  readonly username: string;
+  readonly name: string;
   readonly email: string;
   readonly bio: string;
-  readonly image: string;
+  readonly avatar: string;
 }

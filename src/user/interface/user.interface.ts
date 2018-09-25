@@ -1,9 +1,9 @@
 export interface UserData {
-  username: string;
+  name: string;
   email: string;
   token: string;
   bio: string;
-  image?: string;
+  avatar?: string;
 }
 
 export interface UserRO {
