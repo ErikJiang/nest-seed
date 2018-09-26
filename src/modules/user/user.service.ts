@@ -43,10 +43,10 @@ export class UserService {
   async create(dto: CreateUserDto): Promise<UserRO> {
 
     // check uniqueness of username/email
-    const { username, email, password } = dto;
+    const { name, email, password } = dto;
     const user = await getRepository(UserEntity)
       .createQueryBuilder('user')
-      .where('user.username = :username', { username })
+      .where('user.name = :name', { name })
       .orWhere('user.email = :email', { email })
       .getOne();
 
@@ -57,7 +57,7 @@ export class UserService {
 
     // create new user
     let newUser = new UserEntity();
-    newUser.username = username;
+    newUser.name = name;
     newUser.email = email;
     newUser.password = password;
 
@@ -141,11 +141,11 @@ export class UserService {
    */
   private buildUserRO(user: UserEntity) {
     const userRO = {
-      username: user.username,
+      name: user.name,
       email: user.email,
       bio: user.bio,
       token: this.generateJWT(user),
-      image: user.image
+      avatar: user.avatar
     };
 
     return { user: userRO };

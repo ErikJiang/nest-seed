@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { DBOptions } from '../config';
+import { DBOptions } from './config';
 import { AppController } from './app.controller';
 
-import { UserModule } from './user/user.module';
+import { UserModule } from './modules/user/user.module';
 
 
 @Module({
